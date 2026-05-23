@@ -34,8 +34,8 @@ void BSP_Motor_Init(void)
  * @brief  设置电机A的运行速度与方向
  * @param  speed: 目标速度。范围为 -MOTOR_MAX_SPEED 到 MOTOR_MAX_SPEED。
  * @note   常见的双PWM引脚控制逻辑：
- *         正转：CH1 输出 PWM，CH2 输出 0
- *         反转：CH1 输出 0，CH2 输出 PWM
+ *         正转：CH1 输出 0，CH2 输出 PWM
+ *         反转：CH1 输出 PWM，CH2 输出 0
  *         停止：CH1 和 CH2 均输出 0
  */
 void BSP_Motor_SetSpeed_A(int16_t speed)
@@ -53,15 +53,15 @@ void BSP_Motor_SetSpeed_A(int16_t speed)
     /* 根据速度的正负号判断方向，并分别设置两个通道的占空比 */
     if (speed > 0)
     {
-        // 正转逻辑：CH1 输出占空比，CH2 输出低电平(0)
-        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, speed);
-        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 0);
+        // 正转逻辑：CH1 输出低电平(0)，CH2 输出占空比
+        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
+        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, speed);
     }
     else if (speed < 0)
     {
-        // 反转逻辑：CH1 输出低电平(0)，CH2 输出占空比 (注意speed是负数，需要取反)
-        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
-        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, -speed);
+        // 反转逻辑：CH1 输出占空比 (注意speed是负数，需要取反)，CH2 输出低电平(0)
+        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, -speed);
+        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 0);
     }
     else
     {
