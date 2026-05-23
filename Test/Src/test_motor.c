@@ -19,16 +19,16 @@ void Test_Motor_Routine(void)
     /* 测试主循环 */
     while (1)
     {
-        /* 1. 正转，50% 速度，持续 2 秒 */
-        BSP_Motor_SetSpeed_A(MOTOR_MAX_SPEED / 2);
-        HAL_Delay(2000);
+        /* 1. 正转，80% 速度，持续 1 秒 */
+        BSP_Motor_SetSpeed_A(80);
+        HAL_Delay(1000);
 
         /* 2. 停止，持续 1 秒 */
         BSP_Motor_Stop_A();
         HAL_Delay(1000);
 
-        /* 3. 反转，50% 速度，持续 2 秒 */
-        BSP_Motor_SetSpeed_A(-(MOTOR_MAX_SPEED / 2));
+        /* 3. 反转，80% 速度，持续 2 秒 */
+        BSP_Motor_SetSpeed_A(-80);
         HAL_Delay(2000);
 
         /* 4. 停止，持续 1 秒 */
