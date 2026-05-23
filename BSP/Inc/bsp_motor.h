@@ -15,9 +15,9 @@
 /* 
  * 电机最大速度限制 
  * 根据实际配置的定时器 ARR (Auto-Reload Register) 值进行修改。
- * 例如：如果定时器重装载值为 1000，则满占空比对应 1000。
+ * 在 tim.c 中 TIM1 的 Period (ARR) 配置为 99，因此最大值为 100。
  */
-#define MOTOR_MAX_SPEED 1000
+#define MOTOR_MAX_SPEED 100
 
 /* -------------------- 接口函数声明 -------------------- */
 
