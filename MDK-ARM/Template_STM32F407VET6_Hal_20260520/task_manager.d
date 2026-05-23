@@ -1,0 +1,13 @@
+template_stm32f407vet6_hal_20260520\task_manager.o: ..\App\Src\task_manager.c
+template_stm32f407vet6_hal_20260520\task_manager.o: ../App/Inc/task_manager.h
+template_stm32f407vet6_hal_20260520\task_manager.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+template_stm32f407vet6_hal_20260520\task_manager.o: D:\01_Embedded\04_Tool\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+template_stm32f407vet6_hal_20260520\task_manager.o: D:\01_Embedded\04_Tool\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+template_stm32f407vet6_hal_20260520\task_manager.o: ../Core/Inc/FreeRTOSConfig.h
+template_stm32f407vet6_hal_20260520\task_manager.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+template_stm32f407vet6_hal_20260520\task_manager.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+template_stm32f407vet6_hal_20260520\task_manager.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+template_stm32f407vet6_hal_20260520\task_manager.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+template_stm32f407vet6_hal_20260520\task_manager.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+template_stm32f407vet6_hal_20260520\task_manager.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+template_stm32f407vet6_hal_20260520\task_manager.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
