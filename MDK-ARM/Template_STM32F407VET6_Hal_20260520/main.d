@@ -30,6 +30,7 @@ template_stm32f407vet6_hal_20260520\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/
 template_stm32f407vet6_hal_20260520\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 template_stm32f407vet6_hal_20260520\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 template_stm32f407vet6_hal_20260520\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+template_stm32f407vet6_hal_20260520\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 template_stm32f407vet6_hal_20260520\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 template_stm32f407vet6_hal_20260520\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 template_stm32f407vet6_hal_20260520\main.o: ../Core/Inc/FreeRTOSConfig.h
@@ -42,6 +43,7 @@ template_stm32f407vet6_hal_20260520\main.o: ../Middlewares/Third_Party/FreeRTOS/
 template_stm32f407vet6_hal_20260520\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 template_stm32f407vet6_hal_20260520\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 template_stm32f407vet6_hal_20260520\main.o: ../Core/Inc/tim.h
+template_stm32f407vet6_hal_20260520\main.o: ../Core/Inc/usart.h
 template_stm32f407vet6_hal_20260520\main.o: ../Core/Inc/gpio.h
 template_stm32f407vet6_hal_20260520\main.o: ../BSP/Inc/bsp_motor.h
 template_stm32f407vet6_hal_20260520\main.o: ../Test/Inc/test_motor.h

@@ -17,7 +17,7 @@
  * 根据实际配置的定时器 ARR (Auto-Reload Register) 值进行修改。
  * 在 tim.c 中 TIM1 的 Period (ARR) 配置为 99，因此最大值为 100。
  */
-#define MOTOR_MAX_SPEED 100
+#define MOTOR_MAX_SPEED 4200
 
 /* 
  * 电机衰减模式选择

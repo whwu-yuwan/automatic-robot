@@ -30,4 +30,5 @@ template_stm32f407vet6_hal_20260520\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Dri
 template_stm32f407vet6_hal_20260520\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 template_stm32f407vet6_hal_20260520\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 template_stm32f407vet6_hal_20260520\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+template_stm32f407vet6_hal_20260520\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 template_stm32f407vet6_hal_20260520\stm32f4xx_it.o: ../Core/Inc/stm32f4xx_it.h

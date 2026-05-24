@@ -20,6 +20,7 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -91,6 +92,8 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM1_Init();
+  MX_TIM2_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   BSP_Motor_Init(); /* 启动电机 PWM 输出 */
   
@@ -99,11 +102,11 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Init scheduler */
-  //osKernelInitialize();  /* Call init function for freertos objects (in cmsis_os2.c) */
-  //MX_FREERTOS_Init();
+  osKernelInitialize();  /* Call init function for freertos objects (in cmsis_os2.c) */
+  MX_FREERTOS_Init();
 
   /* Start scheduler */
-  //osKernelStart();
+  osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
 
@@ -112,7 +115,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -139,8 +142,8 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 25;
-  RCC_OscInitStruct.PLL.PLLN = 336;
+  RCC_OscInitStruct.PLL.PLLM = 4;
+  RCC_OscInitStruct.PLL.PLLN = 168;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
@@ -169,7 +172,7 @@ void SystemClock_Config(void)
 
 /**
   * @brief  Period elapsed callback in non blocking mode
-  * @note   This function is called  when TIM2 interrupt took place, inside
+  * @note   This function is called  when TIM3 interrupt took place, inside
   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
   * a global variable "uwTick" used as application time base.
   * @param  htim : TIM handle
@@ -180,7 +183,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE BEGIN Callback 0 */
 
   /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM2)
+  if (htim->Instance == TIM3)
   {
     HAL_IncTick();
   }
